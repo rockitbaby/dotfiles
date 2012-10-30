@@ -10,7 +10,7 @@
   email = babe@rockitbaby.de
 [github]
   user = rockitbaby
-  token = 
+  token = overwritten-in-.extra
 [core]
   excludesfiles = /.gitignore
   whitespace = fix,space-before-tab,tab-in-indent,trailing-space
