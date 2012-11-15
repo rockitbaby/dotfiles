@@ -36,4 +36,8 @@ sudo easy_install Pygments
 brew install ios-sim
 
 # install safari launcher
+# https://github.com/rockitbaby/IOSSimulatorSafariLauncher
+rm -R ~/tools/ios-sim-safari-launcher
 mkdir -p ~/tools/ios-sim-safari-launcher
+curl https://raw.github.com/rockitbaby/IOSSimulatorSafariLauncher/master/build/Debug-iphonesimulator/IOSSimulatorSafariLauncher.app.zip > ~/tools/ios-sim-safari-launcher/IOSSimulatorSafariLauncher.app.zip
+open ~/tools/ios-sim-safari-launcher/IOSSimulatorSafariLauncher.app.zip
