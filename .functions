@@ -27,6 +27,30 @@ function server() {
   python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port"
 }
 
+# functions to start and debug with ios safari
+# deps:
+# - http://github.com/phonegap/ios-sim
+# - http://github.com/rockitbaby/ios-sim-safari-launcher
+function ipad-safari() {
+  ios-sim launch ~/tools/ios-sim-safari-launcher/SafariLauncherIphoneSim.app --family ipad --args $1
+}
+
+function iphone-safari() {
+  ios-sim launch ~/tools/ios-sim-safari-launcher/SafariLauncherIphoneSim.app --family iphone --args $1
+}
+
+function ipad-safari-log-memory() {
+  export CA_LOG_MEMORY_USAGE=1
+  open /Applications/Utilities/Console.app
+  ipad-safari $1
+}
+
+function iphone-safari-log-memory() {
+  export CA_LOG_MEMORY_USAGE=1
+  open /Applications/Utilities/Console.app
+  iphone-safari $1
+}
+
 #https://gist.github.com/790086
 parse_git_branch() {
   ref=$(git symbolic-ref -q HEAD 2> /dev/null) || return

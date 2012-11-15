@@ -30,3 +30,10 @@ sudo easy_install Pygments
 
 # chrome canary as default
 # on a mac you can set chrome canary as your default inside of Safari preferences :)
+
+# install ios-sim to launch apps in ios simulator
+# https://github.com/phonegap/ios-sim
+brew install ios-sim
+
+# install safari launcher
+mkdir -p ~/tools/ios-sim-safari-launcher
