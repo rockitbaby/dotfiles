@@ -12,3 +12,6 @@ alias quitapp="~/tools/quit/quit"
 
 # init rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# os x lion: subl lives there
+export PATH=$PATH:~/bin
